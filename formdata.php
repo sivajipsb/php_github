@@ -66,6 +66,10 @@ $conn->close();
         td {
             font-weight: lighter;
         }
+        th{
+            color:red;
+            background:blue;
+        }
     </style>
 </head>
 
