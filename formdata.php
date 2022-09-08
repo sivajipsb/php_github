@@ -19,7 +19,14 @@
 </form>
 <hr>
 <?php  
+error_reporting (E_ALL ^ E_NOTICE);
 
+$conn=new mysqli("localhost","root","","first") or die("unable to connect");
+if($conn)
+{
+    echo "connected sucessfulyy";
+    echo "<br>";
+}
 echo $_GET["fname"];
 echo "<br>";
 echo $_GET["lname"];
