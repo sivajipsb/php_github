@@ -8,11 +8,11 @@
 </head>
 <body>
     <form action="connect_mysql.php" method="post">
-    <input type="text"  name="fname"/>
+    <input type="text"  name="fname" placeholder="Enter first name"/>
     <br>
-    <input type="text" name="lname"/>
+    <input type="text" name="lname" placeholder="Enter last name" />
     <br>
-    <input type="email" name="email"/>
+    <input type="email" name="email" placeholder="Enter Email"/>
     <br>
     <input type="submit"/>
     </form>
@@ -26,35 +26,17 @@
 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-// Create connection
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $conn = new mysqli($servername, $username, $password);
-// Check connection
-// if ($conn->connect_error) {
-//   die("Connection failed: " . $conn->connect_error);
-// }
-// else{
-//     // echo "Connected Succesfully";
-// }
 
-// create a database
+
 echo "<br>";
 
-// $sql="CREATE DATABASE second";
-// if($conn->query($sql)===TRUE)
-// {
-//     echo "Database Created Succesfully";
-// }
-// else{
-//     "Error creating database:".$conn->error;
-// }
-// $conn->close();
 
 
+// echo "$_POST["fname"];
+// echo "$_POST["lname"];
+// echo "$_POST["email"];
 
-// create a table in database
+
 
 // create a connection first
 
@@ -77,25 +59,19 @@ $sql="CREATE TABLE userdetails(
 )";
 //  $conn->close();
 if ($conn->query($sql) === TRUE) {
-    // echo "Table user detials created successfully";
+    echo "Table user detials created successfully";
   } else {
-    // echo "Error creating table: " . $conn->error;
+    echo "Error creating table: " . $conn->error;
   }
-//   $conn->close();
+
 //   Insert Data Into MySQL Using MySQLi 
 
 $sql="INSERT INTO userdetails(fname,lname,email) VALUES ('".$_POST["fname"]."','".$_POST["lname"]."','".$_POST["email"]."')";
-// if ($conn->query($sql) === TRUE) {
-//     echo "New record created successfully";
-//   } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-//   }
-$conn->query($sql);
-//   $conn->close();
-// The following example selects the id, firstname 
-// and lastname columns from the MyGuests table and displays it on the page:
 
-$sql = "SELECT * FROM userdetails WHERE fname='sehsas'";
+$conn->query($sql);
+
+
+$sql = "SELECT * FROM userdetails ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -106,6 +82,9 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
+
+// $sql="DELETE  FROM userdetails where fname="" ";
+$conn->query($sql);
 $conn->close();
 
 ?>
