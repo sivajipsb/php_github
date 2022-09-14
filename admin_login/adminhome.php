@@ -63,12 +63,12 @@ if ($result) {
     <td>$email</td>
     <td>$tech</td>
     <td>
-     <button> <a href = delete.php >delete</a></button>
+     <button> <a href = delete.php?deleteid=$id >delete</a></button>
     
     
     
 </td>
-<td> <button> <a href = update.php >update</a></button></td>
+<td> <button> <a href = update.php?updateid=$id >update</a></button></td>
     </tr>
     
     ";
