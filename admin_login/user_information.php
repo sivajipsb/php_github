@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="margin:center">
     <form action="#" method="post">
     <input type ="text" name="name" placeholder="Enter Name" required="true" value=""/>
     <br>
@@ -14,7 +14,7 @@
     <br>
     <input type ="email" name="email" placeholder="Enter Email" required="true" value="" />
     <br>
-    <input type ="text" name="tech" placeholder ="Enter tech stack" required="true" value="" />
+    <input type ="text" name="tech" placeholder ="Enter Tech Stack" required="true" value="" />
     <br>
     <input type="submit"/>
     </form>
