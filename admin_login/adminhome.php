@@ -13,7 +13,7 @@
 
 <h1>user information details </h1>
 
-<button><a href="user_information.php">add user details </a></button>
+<button style="color:red"><a href="user_information.php"  style="color:red; text-decoration: none;">Add User  </a></button>
 <br>
 <br>
 
@@ -57,18 +57,18 @@ if ($result) {
 
     echo "
     <tr>
-    <th >$id</th> 
+    <th>$id</th> 
     <td>$name</td>
     <td>$phone</td>
     <td>$email</td>
     <td>$tech</td>
     <td>
-     <button> <a href = delete.php?deleteid=$id >delete</a></button>
+     <button> <a href = delete.php?deleteid=$id  style=color:red; text-decoration: none;>delete</a></button>
     
     
     
 </td>
-<td> <button> <a href = update.php?updateid=$id >update</a></button></td>
+<td> <button > <a href = update.php?updateid=$id style=color:red; text-decoration: none; >update</a></button></td>
     </tr>
     
     ";

@@ -18,7 +18,7 @@
     <br>
     <input type="submit"/>
     </form>
-<a href="admin_login.php">adminlogin</a>
+<a href="admin_login.php"  style="color:red; text-decoration: none;">AdminLogin? ClickHere  </a>
 </body>
 </html>
 
@@ -48,7 +48,7 @@ if ($conn->connect_error) {
   if ($conn->query($sql) === TRUE) {
     // echo "New record created successfully";
   } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
 
