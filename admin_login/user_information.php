@@ -16,7 +16,7 @@
     <br>
     <input type ="text" name="tech" placeholder ="Enter Tech Stack" required="true" value="" />
     <br>
-    <input type="submit"/>
+    <input type="submit" name="submit"/>
     </form>
 <a href="admin_login.php"  style="color:red; text-decoration: none;">AdminLogin? ClickHere  </a>
 </body>

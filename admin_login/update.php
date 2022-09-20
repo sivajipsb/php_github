@@ -9,7 +9,8 @@ if ($conn->connect_error) {
     //   echo "Connected Succesfully";
   }
 $id=$_GET["updateid"];
-// echo $id;
+echo $id;
+echo "<br>";
 
 $sql="select * from userinformation where id=$id";
 
@@ -24,7 +25,7 @@ $techs=$row["tech"];
 
 
 
-// if(isset($_POST["submit"])){
+if(isset($_POST["submit"])){
 
 
 $name=$_POST["name"];
@@ -55,7 +56,7 @@ else{
      
 }
 
-// }
+}
 
 ?>
 
@@ -79,7 +80,7 @@ else{
     <br>
     <input type ="text" name="tech" placeholder ="Enter tech stack" required="true"  value=<?php echo $techs;?>/>
     <br>
-    <input type="submit"/>
+    <input type="submit" name="submit"/>
     </form>
 <!-- <a href="admin_login.php">adminlogin</a> -->
 </body>

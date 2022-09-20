@@ -68,7 +68,7 @@ if ($result) {
     
     
 </td>
-<td> <button > <a href = update.php?updateid=$id style=color:red; text-decoration: none; >Edit</a></button></td>
+<td> <button > <a href = tj_update.php?updateid=$id style=color:red; text-decoration: none; >Edit</a></button></td>
     </tr>
     
     ";
