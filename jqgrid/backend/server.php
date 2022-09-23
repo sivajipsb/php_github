@@ -2,10 +2,10 @@
 
 <?php
 header("Access-Control-Allow-Origin: *");
-error_reporting (E_ALL ^ E_NOTICE);
+error_reporting (0);
 
 include "connection.php";
-
+// echo "hello";
 
 $page = $_GET['page'];
 $limit = $_GET['rows'];
@@ -45,6 +45,8 @@ while ($row = mysqli_fetch_array($result)) {
     );
     $i++;
 }
+
+// echo "hello end";
 // console.warn(xhr.responseText);
 echo json_encode($responce);
 ?>
