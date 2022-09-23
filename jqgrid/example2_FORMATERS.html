@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="C:\wamp64\www\jqgrid\css\ui.jqgrid.css"> -->
+    <!-- <link rel="stylesheet" href="C:\wamp64\www\jqgrid\css\jquery-ui.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script> 
+    <script>
+        var data=[{id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"2007-10-01",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"2007100125",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"2007100125",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"20071001",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"20071001",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"20071001",Email:"pandasivaji@gmail.com",Verified:"true"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"20071001",Email:"pandasivaji@gmail.com",Verified:"false"},
+        {id:"1",First_Name:"sivaji",Last_Name:"panda",DOB:"20071001",Email:"pandasivaji@gmail.com",Verified:"true"}]
+
+
+        $(function (){
+            jQuery("#grid").jqGrid({
+                datatype:"local",
+                data:data,
+                colModel:[
+                    {name:"id",lable:"id"},
+                    {name:"First_Name",lable:"First_Name"},
+                    {name:"Last_Name",lable:"Second_Name"},
+                    {name:"DOB",lable:"DOB"},
+                    // {name: 'DOB',label: 'Date',formatter: "DOB",
+                    // formatoptions:{ srcformat: 'U', newformat: 'M jS Y' }},
+                    {name:"Email",lable:"Email",width:220,},
+                    // {name:"Verified",lable:"Verified"},
+                    { name: 'verified', label: 'Verified', formatter: isVerified
+ },
+            
+            
+ 
+            
+            
+            ],
+
+                height:"auto",
+                pager:"#pager",
+                rowNum:5
+
+
+            })
+        })
+        function isVerified (val, cellProps, rowData){
+ if (val) {
+ return "Yes";
+ } else {
+ return "YES";
+ }
+}
+    </script>
+</head>
+<body>
+    <table id="grid"></table>
+    <div id="pager"></div>
+</body>
+</html>

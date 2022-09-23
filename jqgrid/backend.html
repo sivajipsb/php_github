@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css"> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+
+ <script>
+$(function(){
+    
+    jQuery("#grid").jqGrid({
+        datatype: "json",
+        url: "server.php",
+        pager: "#pager",
+        mtype: "GET",
+        colModel: [
+         {name:"id",lable:"id"} ,  
+        { name: "First_Name", label: 'Name' },
+        {name:"Last_Name",lable:"lastname"},
+        { name: "DOB", label: 'dob' },
+        { name: "Email", label: 'Email' },
+        
+ ]
+        
+ 
+
+
+   
+})
+
+$("#grid").jqGrid('navGrid', "#pager", {});
+})
+
+
+ </script>
+</head>
+<body>
+    <table id="grid"></table>
+    <div id="pager"></div>
+</body>
+</html>

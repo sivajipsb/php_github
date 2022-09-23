@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/css/ui.jqgrid.min.css"> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script> 
+ <script>
+
+var data = [
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ ];
+    $(function (){
+        jQuery("#grid").jqGrid
+({
+    
+
+            datatype:"local",
+            data:data,
+            colModel:[
+                
+            { name:"name",lable:"Name",width:250},
+            {name:"phone",lable:"Phone",width:250},
+            ],
+            pager:"#pager",
+            // rowNum:4,
+            pagerpos: "center",
+            recordpos: "right",
+            pgbuttons: true,
+            pginput: true,
+            viewrecords: true,
+            rowList: [ 5, 10],
+            pgtext: "{0} out of {1}",
+           recordtext: "Showing [{0} - {1}] of {2}",
+          
+
+           
+        })
+        
+        
+        // jQuery("grid").jqGrid('navGrid','#pager',{edit:false,add:false,del:false,serach:true});
+        // $("#grid").jqGrid('navGrid', "#pager",   searchOp, viewOp);
+        $("#grid").jqGrid('navGrid', "#pager", {});
+    })
+ </script>
+</head>
+<body>
+    <table id="grid"></table>
+    <div id="pager"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\wamp64\www\jqgrid\css\ui.jqgrid.css">
+    <link rel="stylesheet" href="C:\wamp64\www\jqgrid\css\jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script> 
+    <!-- <script src="C:\wamp64\www\jqgrid\js\jquery.min.js"></script> -->
+    <!-- <script src="C:\wamp64\www\jqgrid\js\trirand\jquery.jqGrid.min.js"></script> -->
+    <script type="text/javascript">
+
+    var dataArray = [
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},
+ {name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ {name: 'Jeff', phone: '365-267-8325'},{name: 'Bob', phone: '232-532-6268'},
+ ];
+$(function () {
+    jQuery("#grid").jqGrid({
+
+    datatype: 'local',
+    data: dataArray,
+    colModel:[
+        {name:"name",lable:"Name"},
+        {name:"phone",lable:"Phone_number"}
+    ],
+    height:"auto",
+    caption:"example_jggrid",
+    rowNum: 10,
+    pager: "#pager",
+
+})
+});
+    </script>
+</head>
+<body>
+    <table id="grid"></table>
+    <div id="pager"></div>
+</body>
+</html>
