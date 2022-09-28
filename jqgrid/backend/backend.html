@@ -28,15 +28,27 @@ $(function(){
         { name: "DOB", label: 'DOB' },
         { name: "Email", label: 'Email' },
         
- ]
+ ],
         
- 
+ rowNum:50,
+//    rowTotal: 200,
+//    rowList : [20,30,50],
+   loadonce:true,
+      mtype: "GET",
+   rownumbers: true,
+//    rownumWidth: 40,
+   gridview: true,
+      pager: '#pager451',
+    //   sortname: 'id',
+    viewrecords: true,
+    // sortorder: "asc",
 
 
    
 })
 
-$("#grid").jqGrid('navGrid', "#pager", {});
+// $("#grid").jqGrid('navGrid', "#pager", {});
+jQuery("#grid").jqGrid('filterToolbar',{searchOperators : true});
 })
 
 

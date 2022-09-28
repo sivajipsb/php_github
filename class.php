@@ -33,5 +33,5 @@ class cricket{
 }
 
 $cricket1 = new cricket("sachin","ponting","root");
- echo "$cricket1->india";
+ echo $cricket1->india;
  ?> 
